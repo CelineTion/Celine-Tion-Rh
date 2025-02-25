@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Celine Tion, diseñadora gráfica especializada en identidad visual y comunicación digital.">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/script.js" defer></script>
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/logo_2.svg" alt="Isotipo Celine Tion" class="logo">
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pages/proyectos.html">Proyectos</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+                <li><a href="./pages/recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada">
+            <h1>Celine Tion</h1>
+            <h2 class="subtitulo">Hagamos del diseño, algo más humano</h2>
+            <p>Solo con algo de información</p>
+            <button id="scroll-btn">¿Quién es esta humana?</button>
+        </section>
+
+        <section class="sobre_mi" aria-labelledby="sobre-mi">
+            <h2 id="sobre-mi" class="visually-hidden">Sobre Mí</h2>
+            <article class="seccion" aria-label="Quién soy">
+                <img src="./assets/logo_1_1.svg" alt="Logotipo Celine Tion">
+                <div class="texto">  
+                    <h3 id="yo">Quién soy</h3>
+                    <p>Soy Celine, diseñadora gráfica especializada en identidad visual y comunicación digital. Me apasiona transformar ideas en imágenes impactantes y crear marcas con personalidad. Con experiencia en diseño web, branding y gestión de redes sociales, busco que cada proyecto tenga una identidad única y coherente.</p>
+                </div>
+            </article>
+
+            <article class="seccion" aria-label="Qué hago">
+                <img src="./assets/icon_3.svg" alt="Icono estrella rosa">
+                <div class="texto"> 
+                    <h3>Qué hago</h3>
+                    <p>Me dedico a renovar y crear identidades visuales para marcas que quieren destacar. Desde logotipos hasta estrategias visuales completas, diseño con un enfoque moderno y adaptable. También gestiono redes sociales, asegurando que la comunicación de cada marca sea clara, estética y efectiva.</p>
+                </div>
+            </article>
+
+            <article class="seccion" aria-label="Cómo lo hago">
+                <img src="./assets/icon_1.svg" alt="Icono flor azul">
+                <div class="texto">
+                    <h3>Cómo lo hago</h3>
+                    <p>Mi proceso comienza con una investigación profunda de la marca y su público objetivo. A partir de ahí, desarrollo conceptos creativos y estrategias visuales que reflejan su esencia. Trabajo con herramientas como Adobe Creative Suite y Canva, y aplico tendencias de diseño para lograr resultados frescos y profesionales.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="faqs" aria-labelledby="faqs-heading">
+            <h2 id="faqs-heading">Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">¿Cómo se inicia un proyecto?</button>
+                <div class="faq-answer" style="display: none;">Primero realizo una reunión para conocer las necesidades y objetivos del proyecto.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">¿Cuánto tiempo tarda un proyecto?</button>
+                <div class="faq-answer" style="display: none;">El tiempo varía según la complejidad, pero normalmente toma entre 2 y 4 semanas.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">¿Ofreces gestión de redes sociales?</button>
+                <div class="faq-answer" style="display: none;">Sí, puedo ayudarte a gestionar tus redes con una estrategia visual y de contenido coherente.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">¿Cómo puedo contactarte?</button>
+                <div class="faq-answer" style="display: none;">Puedes enviarme un correo o llenar el formulario en la página de contacto.</div>
+            </div>
+        </section>
+
+        <section class="comunidad">
+            <h5>¿Sabías que puedes formar parte de una comunidad de diseñadores + humanos?</h5>
+            <form id="emailForm" action="https://formspree.io/f/xvgzjbze" method="POST">
+                <label for="email">Ingresa tu email:</label>
+                <input type="email" id="email" name="email" placeholder="Ejemplo: correo@dominio.com" required>
+                <input type="submit" value="Quiero ser parte">
+            </form>
+            <p id="confirmationMessage" style="display: none; color: green; margin-top: 10px;">¡Gracias por suscribirte! Revisa tu correo.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Celine Tion RH - Todos los derechos reservados</p>
+        <img src="./assets/logo_2.svg" alt="Isotipo Celine Tion" class="logo">
+    </footer>
+
+    <script>
+        // Desplazamiento suave al hacer clic en el botón
+        document.getElementById("scroll-btn").addEventListener("click", function() {
+            document.getElementById("yo").scrollIntoView({ behavior: "smooth" });
+        });
+
+        // Funcionalidad de las preguntas frecuentes (FAQs)
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+                const answer = button.nextElementSibling;
+                const isExpanded = button.getAttribute("aria-expanded") === "true";
+                button.setAttribute("aria-expanded", !isExpanded);
+                answer.style.display = isExpanded ? "none" : "block";
+            });
+        });
+    </script>
+</body>
+</html>

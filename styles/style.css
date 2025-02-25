@@ -1,0 +1,147 @@
+/* ==============================
+   GOOGLE FONTS - DM SERIF TEXT
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+/* ==============================
+   RESET Y ESTILOS GENERALES
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #F8F9FA;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "DM Serif Text", serif;
+    color: #731D5C;
+}
+
+/* ==============================
+   HEADER
+============================== */
+header {
+    background-color: #F23DC2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F28322;
+}
+
+/* ==============================
+   BOTONES
+============================== */
+button, input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F23DC2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #731D5C;
+}
+
+/* ==============================
+   FORMULARIOS
+============================== */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #731D5C;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ==============================
+   SECCIONES GENERALES
+============================== */
+section {
+    padding: 40px 20px;
+    background-color: #FFF;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+    background-color: #F23DC2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+}
