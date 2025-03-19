@@ -1,0 +1,29 @@
+@import 'variables';
+
+@media (max-width: 768px) {
+    .portada-index h1 {
+        font-size: 48px;
+    }
+
+    .portada-index button {
+        font-size: 14px;
+    }
+
+    .proyectos-hero h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portada-index h1 {
+        font-size: 36px;
+    }
+
+    .proyectos-hero h1 {
+        font-size: 32px;
+    }
+
+    .proyectos-boton {
+        font-size: 14px;
+    }
+}

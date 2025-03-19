@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'global';
+@import 'header';
+@import 'footer';
+@import 'buttons';
+@import 'forms';
+@import 'index';
+@import 'proyectos';
+@import 'responsive';
+
+// Corrección Bootstrap
+
+header.bg-primary {
+    background-color: #F23DC2 !important;
+}

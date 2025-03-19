@@ -1,0 +1,17 @@
+@import 'variables';
+
+footer {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+
+    .logo {
+        max-width: 120px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 10px auto;
+    }
+}

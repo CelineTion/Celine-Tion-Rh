@@ -1,0 +1,33 @@
+@import 'variables';
+
+header {
+    background-color: #F23DC2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+
+    .logo {
+        width: 100px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+
+        li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}

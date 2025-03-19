@@ -1,0 +1,25 @@
+@import 'variables';
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+body {
+    line-height: 1.6;
+    background-color: $background-color;
+    color: $text-color;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: $font-family-title;
+    color: $tertiary-color;
+}

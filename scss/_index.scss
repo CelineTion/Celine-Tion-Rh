@@ -1,0 +1,104 @@
+@import 'variables';
+
+.portada-index {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #1d73e4;
+    color: rgba(0, 0, 0, 0.233);
+
+    .portada-container {
+        max-width: 600px; // Controlar el ancho
+        margin: 0 auto;
+        padding: 20px;
+        background: white; // Asegura que tenga fondo blanco si antes lo tenía
+        border-radius: 15px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 64px;
+        color: $primary-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: white;
+    }
+
+    .subtitulo {
+        font-size: 24px;
+        color: $secondary-color;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background-color: $tertiary-color;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+.seccion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #E0E8FF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    img {
+        max-width: 150px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+.faqs {
+    text-align: center;
+    margin-top: 40px;
+
+    .faq-item {
+        width: 100%;
+        max-width: 600px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .faq-question {
+        width: 100%;
+        padding: 10px;
+        background-color: #F23DC2;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: left;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .faq-question:hover {
+        background-color: #D41BA7;
+    }
+
+    .faq-answer {
+        display: none;
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+        width: 100%;
+        text-align: left;
+    }
+}
