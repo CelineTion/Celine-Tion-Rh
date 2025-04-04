@@ -175,6 +175,62 @@ header .nav .nav-link:hover {
   color: #F8931F !important;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+.nav-menu .nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-menu .nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-menu .nav-list li a:hover {
+  color: #F8931F;
+}
+@media (max-width: 768px) {
+  .nav-menu .nav-list {
+    flex-direction: column;
+    background-color: #F23DC2;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+  .nav-menu .nav-list.active {
+    display: flex;
+  }
+}
+
 footer {
   background-color: #F23DC2;
   color: white;

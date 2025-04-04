@@ -19,18 +19,26 @@
 <body>
 
     <header>
-        <div class="container">
-            <img src="../assets/logo_2.svg" alt="Isotipo Celine Tion" class="logo">
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./proyectos.html">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./recursos.html">Recursos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+        <div class="container header-container">
+          <img src="./assets/logo_2.svg" alt="Isotipo Celine Tion" class="logo">
+          
+          <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+      
+          <nav class="nav-menu">
+            <ul class="nav-list">
+              <li><a href="/index.html">Inicio</a></li>
+              <li><a href="./pages/proyectos.html">Proyectos</a></li>
+              <li><a href="./pages/recursos.html">Recursos</a></li>
+              <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
         </div>
-    </header>
+      </header>
+      
 
     <main>
     <!-- HERO DEL PROYECTO -->
@@ -114,5 +122,17 @@
         <img src="../assets/logo_2.svg" alt="Isotipo Celine Tion" width="100px">
     </footer>
 
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.nav-list');
+      
+        hamburger.addEventListener('click', () => {
+          const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !expanded);
+          navList.classList.toggle('active');
+        });
+      </script>
+      
 </body>
 </html>

@@ -32,3 +32,63 @@ header {
     }
   }
 }  
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.nav-menu {
+  .nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+    li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: $tertiary-color;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      background-color: $primary-color;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+}
