@@ -1,44 +1,166 @@
 @import 'variables';
 
+// HERO
 .proyectos-hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #056CF2;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, $primary-color, $secondary-color);
+  color: white;
+
+  h1 {
+    font-size: 64px;
+    color: $tertiary-color;
+    margin-bottom: 10px;
+    font-family: $font-family-title;
+  }
+
+  .proyectos-subtitulo {
+    font-size: 20px;
     color: white;
+    margin-bottom: 30px;
+    font-family: $font-family-base;
+  }
 
-    h1 {
-        font-size: 72px;
-        color: $primary-color;
-        margin-bottom: 10px;
-    }
-
-    .proyectos-subtitulo {
-        font-size: 28px;
-        color: $secondary-color;
-        margin-bottom: 30px;
-    }
-
-    .proyectos-boton {
-        padding: 12px 24px;
-        border: none;
-        border-radius: 30px;
-        background-color: $tertiary-color;
-        color: white;
-        font-size: 18px;
-        text-decoration: none;
-        display: inline-block;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: $secondary-color;
-        }
-    }
+  .proyectos-boton {
+    @include boton-estilo($primary-color, $tertiary-color);
+    margin-top: 10px;
+  }
 }
 
-.proyectos-testimonio img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+// VIDEO DESTACADO
+.proyectos-video-destacado {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 60px 20px;
+
+  h2 {
+    font-size: 32px;
+    color: $tertiary-color;
+    margin-bottom: 20px;
+    font-family: $font-family-title;
+  }
+
+  video {
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// GALERÍA DE PROYECTOS
+.galeria-proyectos {
+  background-color: #ffffff;
+  padding: 80px 20px;
+
+  h2 {
+    font-size: 32px;
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 40px;
+    font-family: $font-family-title;
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      color: $secondary-color;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: $text-color;
+    }
+
+    .btn {
+      @include boton-estilo($tertiary-color, white);
+    }
+  }
+}
+
+// TESTIMONIOS
+.proyectos-testimonios {
+  background-color: $tertiary-color;
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 40px;
+    font-family: $font-family-title;
+  }
+
+  .card {
+    border: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    .card-title {
+      font-style: italic;
+      color: $secondary-color;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .card-text {
+      font-size: 15px;
+      color: $text-color;
+    }
+  }
+
+  .testimonio-img {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    margin-bottom: 10px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .proyectos-boton {
+    @include boton-estilo($primary-color, $tertiary-color);
+    margin-top: 30px;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+
+// SOBRE EL DISEÑO HUMANO
+.proyectos-diseno-humano {
+  background-color: #f4f4f4;
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    color: $tertiary-color;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-family: $font-family-title;
+  }
+
+  .contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    p {
+      max-width: 300px;
+      font-size: 16px;
+      text-align: justify;
+      color: $text-color;
+    }
+  }
 }

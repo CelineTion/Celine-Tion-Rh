@@ -1,29 +1,138 @@
-@import 'variables';
-
 @media (max-width: 768px) {
-    .portada-index h1 {
-        font-size: 48px;
-    }
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .portada-index button {
-        font-size: 14px;
-    }
+  header .nav {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
 
-    .proyectos-hero h1 {
-        font-size: 42px;
+  .portada-index h1 {
+    font-size: 42px;
+  }
+
+  .portada-index .subtitulo {
+    font-size: 20px;
+  }
+
+  .seccion {
+    flex-direction: column;
+    text-align: center;
+
+    img {
+      max-width: 100px;
     }
+  }
+
+  .faqs .faq-question {
+    font-size: 14px;
+  }
+
+  .comunidad-index form {
+    padding: 15px;
+  }
+
+  .newsletter .newsletter-contenido {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .galeria-proyectos .card {
+    margin-bottom: 30px;
+  }
+
+  .proyectos-testimonios .card {
+    margin-bottom: 30px;
+  }
+
+  .proyecto-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .proyecto-hero-content h2 {
+    font-size: 18px;
+  }
+
+  .proyecto-highlights-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proyecto-software .proyecto-herramientas {
+    flex-direction: column;
+  }
+
+  .contacto-servicios .contacto-servicios-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proyectos-diseno-humano .contenido {
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      max-width: 100%;
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
-    .portada-index h1 {
-        font-size: 36px;
-    }
+  h1 {
+    font-size: 32px;
+  }
 
-    .proyectos-hero h1 {
-        font-size: 32px;
-    }
+  h2 {
+    font-size: 24px;
+  }
 
-    .proyectos-boton {
-        font-size: 14px;
-    }
+  h3 {
+    font-size: 20px;
+  }
+
+  .portada-index h1 {
+    font-size: 32px;
+  }
+
+  .proyectos-hero h1 {
+    font-size: 30px;
+  }
+
+  .proyectos-boton,
+  .boton-personalizado {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .proyecto-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .proyecto-hero-content h2 {
+    font-size: 16px;
+  }
+
+  .testimonios blockquote {
+    font-size: 14px;
+  }
+
+  .newsletter .newsletter-contenido .newsletter-texto h1 {
+    font-size: 32px;
+  }
+
+  .newsletter .newsletter-contenido .newsletter-texto h2 {
+    font-size: 20px;
+  }
+
+  .newsletter .newsletter-img {
+    max-width: 280px;
+  }
 }

@@ -1,104 +1,120 @@
 @import 'variables';
 
 .portada-index {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #1d73e4;
-    color: rgba(0, 0, 0, 0.233);
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, lighten($secondary-color, 5%), darken($secondary-color, 5%));
+  color: white;
 
-    .portada-container {
-        max-width: 600px; // Controlar el ancho
-        margin: 0 auto;
-        padding: 20px;
-        background: white; // Asegura que tenga fondo blanco si antes lo tenía
-        border-radius: 15px;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    }
+  h1 {
+    font-size: 64px;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
 
-    h1 {
-        font-size: 64px;
-        color: $primary-color;
-        margin-bottom: 10px;
-    }
+  .subtitulo {
+    font-size: 28px;
+    color: $tertiary-color;
+    margin-bottom: 15px;
+  }
 
-    p {
-        color: white;
-    }
+  p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 30px;
+  }
 
-    .subtitulo {
-        font-size: 24px;
-        color: $secondary-color;
-        margin-bottom: 20px;
-    }
-
-    button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 20px;
-        background-color: $tertiary-color;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: $secondary-color;
-        }
-    }
+  button {
+    @include boton-estilo($primary-color, $tertiary-color);
+    border-radius: 20px;
+    font-weight: bold;
+  }
 }
 
-.seccion {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #E0E8FF;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
 
-    img {
-        max-width: 150px;
-        height: auto;
-        object-fit: contain;
-    }
+.seccion {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #E0E8FF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+  img {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 .faqs {
-    text-align: center;
-    margin-top: 40px;
+  text-align: center;
+  margin-top: 40px;
+  color : $secondary-color;
 
-    .faq-item {
-        width: 100%;
-        max-width: 600px;
-        margin: 10px auto;
-        display: flex;
-        flex-direction: column;
+  .faq-item {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .faq-answer {
+    display: none;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.comunidad-index {
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid $primary-color;
+    border-radius: 15px;
+    background-color: white;
+
+    input[type="email"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid $primary-color;
     }
 
-    .faq-question {
-        width: 100%;
-        padding: 10px;
-        background-color: #F23DC2;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: left;
-        border: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
+    input[type="submit"] {
+      @include boton-estilo($primary-color, $tertiary-color);
+      border-radius: 10px;
     }
-
-    .faq-question:hover {
-        background-color: #D41BA7;
-    }
-
-    .faq-answer {
-        display: none;
-        background-color: white;
-        padding: 15px;
-        border-radius: 5px;
-        width: 100%;
-        text-align: left;
-    }
+  }
 }

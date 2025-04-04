@@ -1,0 +1,191 @@
+@import 'variables';
+
+.newsletter {
+  padding: 60px 20px;
+  background-color: transparentize($tertiary-color, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .newsletter-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+    .newsletter-img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    .newsletter-texto {
+      max-width: 400px;
+      text-align: center;
+
+      h1 {
+        font-size: 40px;
+        font-weight: 1000;
+        font-family: $font-family-title;
+        color: $primary-color;
+        margin-bottom: 10px;
+      }
+
+      h2.subtitulo {
+        font-size: 26px;
+        color: $tertiary-color;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 20px;
+        color: $secondary-color;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      .form-newsletter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input[type="email"] {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid $primary-color;
+          border-radius: 8px;
+          margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+          @include boton-estilo($primary-color, $tertiary-color);
+        }
+      }
+    }
+  }
+}
+
+.recursos {
+    padding: 60px 20px;
+    background-color: $secondary-color;
+  
+    .recursos-info {
+      margin-bottom: 40px;
+      text-align: center;
+  
+      h2 {
+        font-size: 26px;
+        color: $tertiary-color;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+  
+      p {
+        max-width: 600px;
+        margin: 0 auto;
+        color: white;
+      }
+  
+      .home_community_icon {
+        width: 70px;
+        margin-bottom: 10px;
+      }
+    }
+  
+    .categorias-recursos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+  
+      figure {
+        text-align: center;
+  
+        img {
+          width: 70px;
+          height: auto;
+          margin-bottom: 10px;
+        }
+  
+        figcaption {
+          font-weight: bold;
+          color: $tertiary-color;
+        }
+      }
+    }
+  }
+  
+
+.testimonios {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: white;
+
+  h2 {
+    color: $tertiary-color;
+    margin-bottom: 40px;
+  }
+
+  .testimonio {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+
+    blockquote {
+      font-style: italic;
+      color: $text-color;
+
+      cite {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        color: darken($text-color, 20%);
+      }
+    }
+  }
+}
+
+.newsletter-final {
+  padding: 60px 20px;
+  background-color: transparentize($tertiary-color, 0.6);
+  text-align: center;
+
+  h2 {
+    font-size: 24px;
+    color: $primary-color;
+    font-weight: 1000;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  .formulario-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+
+    input[type="email"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid $primary-color;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    input[type="submit"] {
+      @include boton-estilo($primary-color, $tertiary-color);
+    }
+  }
+
+  small {
+    font-size: 12px;
+    color: $text-color;
+  }
+}

@@ -1,116 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de contacto de Celine Tion. Trabajemos juntos en tu proyecto de diseño gráfico.">
-    <link rel="stylesheet" href="../styles/style.css">
-    <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap JS (con Popper.js, necesario para algunos componentes) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de contacto de Celine Tion. Trabajemos juntos en tu proyecto de diseño gráfico.">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-    <title>Contacto | Celine Tion</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap JS (con Popper.js, necesario para algunos componentes) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>Contacto | Celine Tion</title>
 </head>
+
+<!-- Activación slide in tarjetas -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  });
+  </script>
+
 <body>
-    <header class="bg-primary text-white py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <img src="../assets/logo_2.svg" alt="Isotipo Celine Tion" class="logo">
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./proyectos.html">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./recursos.html">Recursos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+  <header>
+    <div class="container">
+      <img src="../assets/logo_2.svg" alt="Isotipo Celine Tion" class="logo">
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección de Contacto -->
+    <section class="contacto-portada">
+      <h1>Trabajemos juntxs</h1>
+      <h2 class="subtitulo">Seamos más humanos</h2>
+      <div class="contacto-formulario">
+        <div class="contacto-imagen">
+          <img src="../assets/work_with_me.jpg" alt="Imagen de contacto">
         </div>
-    </header>
-
-    <main>
-        <!-- Sección de Contacto -->
-        <section class="contacto-portada">
-            <h1>Trabajemos juntxs</h1>
-            <h2 class="subtitulo">Seamos más humanos</h2>
-            <div class="contacto-formulario">
-                <div class="contacto-imagen">
-                    <img src="../assets/work_with_me.jpg" alt="Imagen de contacto">
-                </div class="container my-5">
-                <h2 class="text-center">Trabajemos Juntos</h2>
-                <form action="https://formspree.io/f/xvgzjbze" method="POST" class="row g-3">
-                    <div class="col-md-6">
-                        <label for="nombre" class="form-label">Nombre y apellido</label>
-                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej: Celine Tion" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="negocio" class="form-label">Nombre de tu negocio</label>
-                        <input type="text" id="negocio" name="negocio" class="form-control" placeholder="Ej: Grafismo Renova" required>
-                    </div>
-                    <div class="col-md-12">
-                        <label for="correo" class="form-label">Correo Electrónico</label>
-                        <input type="email" id="correo" name="correo" class="form-control" placeholder="Ej: correo@email.com" required>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
-                </form>
+        <div class="container my-5">
+          <h2 class="text-center">Trabajemos Juntos</h2>
+          <form action="https://formspree.io/f/xvgzjbze" method="POST" class="row g-3">
+            <div class="col-md-6">
+              <label for="nombre" class="form-label">Nombre y apellido</label>
+              <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej: Celine Tion" required>
             </div>
-            <p>Queremos conocer tu proyecto y encontrar la mejor manera de ayudarte. Enviá tu consulta y nos pondremos en contacto a la brevedad.</p>
-        </section>
-
-        <!-- Sección de Servicios -->
-        <section class="contacto-servicios">
-            <h2>Nuestros Servicios</h2>
-            <div class="contacto-servicios-grid">
-                <article>
-                    <img src="../assets/Identidad_Visual.png" alt="Servicio 1">
-                    <h3>Identidad Visual</h3>
-                    <p>Diseñamos logotipos y sistemas visuales que representan tu marca de manera auténtica.</p>
-                </article>
-                <article>
-                    <img src="../assets/Diseño_Web.png" alt="Servicio 2">
-                    <h3>Diseño Web</h3>
-                    <p>Desarrollamos sitios web atractivos y funcionales, optimizados para todas las plataformas.</p>
-                </article>
-                <article>
-                    <img src="../assets/Redes_Sociales.jpg" alt="Servicio 3">
-                    <h3>Gestión de Redes Sociales</h3>
-                    <p>Creación y gestión de contenido visual para fortalecer la presencia de tu marca en redes.</p>
-                </article>
+            <div class="col-md-6">
+              <label for="negocio" class="form-label">Nombre de tu negocio</label>
+              <input type="text" id="negocio" name="negocio" class="form-control" placeholder="Ej: Grafismo Renova" required>
             </div>
-        </section>
+            <div class="col-md-12">
+              <label for="correo" class="form-label">Correo Electrónico</label>
+              <input type="email" id="correo" name="correo" class="form-control" placeholder="Ej: correo@email.com" required>
+            </div>
+            <div class="col-md-12 text-center">
+              <button type="submit" class="boton-personalizado">Enviar</button>
+            </div>
+          </form>
+        </div>
+        <p>Queremos conocer tu proyecto y encontrar la mejor manera de ayudarte. Enviá tu consulta y nos pondremos en contacto a la brevedad.</p>
+      </div>
+    </section>
 
-        <!-- Video de Testimonios -->
-        <section class="contacto-video-testimonios">
-            <h2>Video de Testimonios de Clientes</h2>
-            <video src="../assets/video1.mp4" controls aria-label="Video de testimonios de clientes" width="100%" muted></video>
-        </section>
+    <!-- Sección de Servicios -->
+    <section class="contacto-servicios">
+      <h2>Nuestros Servicios</h2>
+      <div class="contacto-servicios-grid">
+        <article class="card">
+          <img src="../assets/Identidad_Visual.jpg" alt="Servicio 1">
+          <h3>Identidad Visual</h3>
+          <p>Diseñamos logotipos y sistemas visuales que representan tu marca de manera auténtica.</p>
+        </article>
+        <article class="card">
+          <img src="../assets/Diseño_Web.png" alt="Servicio 2">
+          <h3>Diseño Web</h3>
+          <p>Desarrollamos sitios web atractivos y funcionales, optimizados para todas las plataformas.</p>
+        </article>
+        <article class="card">
+          <img src="../assets/Redes_Sociales.jpg" alt="Servicio 3">
+          <h3>Gestión de Redes Sociales</h3>
+          <p>Creación y gestión de contenido visual para fortalecer la presencia de tu marca en redes.</p>
+        </article>
+      </div>
+    </section>
 
-        <!-- Ventajas de un diseño más humano -->
-        <section class="contacto-ventajas">
-            <h2>Ventajas de un diseño más humano</h2>
-            <ul>
-                <li><img src="../assets/check.png" alt="check"> Experiencia personalizada, diseñada a tu medida y la de tu negocio.</li>
-                <li><img src="../assets/check.png" alt="check"> Comunicación clara y constante durante todo el proceso de trabajo.</li>
-                <li><img src="../assets/check.png" alt="check"> Entrega puntual y resultados que generan impacto en tu marca.</li>
-            </ul>
-        </section>
+    <!-- Video de Testimonios -->
+    <section class="contacto-video-testimonios">
+      <h2>Video de Testimonios de Clientes</h2>
+      <video src="../assets/video1.mp4" controls aria-label="Video de testimonios de clientes" width="100%" muted></video>
+    </section>
 
-        <!-- Información de Contacto -->
-        <section class="contacto-informacion">
-            <h2>Charlemos</h2>
-            <ul>
-                <li><img src="../assets/email.png" alt="email"> Email: celinetionrh@gmail.com</li>
-                <li><img src="../assets/whatsapp.png" alt="whatsapp"> Teléfono: +54 341 348 3802</li>
-                <li><img src="../assets/redes.png" alt="redes"> Redes Sociales: @celinetionrh</li>
-                <li><a href="https://linktr.ee/celinetion" target="_blank" class="contacto-link">Otros Links</a></li>
-            </ul>
-        </section>
-    </main>
+    <!-- Ventajas de un diseño más humano -->
+    <section class="contacto-ventajas">
+      <h2>Ventajas de un diseño más humano</h2>
+      <ul>
+        <li><img src="../assets/check.png" alt="check"> Experiencia personalizada, diseñada a tu medida y la de tu negocio.</li>
+        <li><img src="../assets/check.png" alt="check"> Comunicación clara y constante durante todo el proceso de trabajo.</li>
+        <li><img src="../assets/check.png" alt="check"> Entrega puntual y resultados que generan impacto en tu marca.</li>
+      </ul>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Celine Tion RH - Todos los derechos reservados</p>
-        <img src="../assets/logo_2.svg" alt="Isotipo Celine Tion" class="logo">
-    </footer>
+    <!-- Información de Contacto -->
+    <section class="contacto-informacion">
+      <h2>Charlemos</h2>
+      <ul>
+        <li><img src="../assets/email.png" alt="email"> Email: celinetionrh@gmail.com</li>
+        <li><img src="../assets/whatsapp.png" alt="whatsapp"> Teléfono: +54 341 348 3802</li>
+        <li><img src="../assets/redes.png" alt="redes"> Redes Sociales: @celinetionrh</li>
+        <li><a href="https://linktr.ee/celinetion" target="_blank" class="contacto-link">Otros Links</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Celine Tion RH - Todos los derechos reservados</p>
+    <img src="../assets/logo_2.svg" alt="Isotipo Celine Tion" class="logo">
+  </footer>
+
+  <!-- Script para animación de entrada -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.card');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
 </body>
 </html>

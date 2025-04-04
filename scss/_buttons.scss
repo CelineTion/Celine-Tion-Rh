@@ -1,15 +1,25 @@
 @import 'variables';
 
-button, input[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: $primary-color;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+@mixin boton-estilo($bg, $hover-bg) {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: $bg;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 
-    &:hover {
-        background-color: $tertiary-color;
-    }
+  &:hover {
+    background-color: $hover-bg;
+  }
+}
+
+.boton-personalizado {
+    @include boton-estilo($primary-color, $tertiary-color);
+  }
+  
+
+button, input[type="submit"] {
+  @include boton-estilo($primary-color, $tertiary-color);
 }

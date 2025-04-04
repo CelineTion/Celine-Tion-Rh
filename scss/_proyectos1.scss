@@ -1,0 +1,193 @@
+@import 'variables';
+@import 'buttons';
+
+.proyecto-hero {
+  background: linear-gradient(to bottom, rgba($secondary-color, 0.9), rgba($primary-color, 0.9));
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-size: cover;
+  background-position: center;
+
+  .proyecto-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h3 {
+      font-size: 20px;
+      color: white;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 56px;
+      color: $tertiary-color;
+      font-family: $font-family-title;
+      margin: 10px 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .proyecto-boton {
+      @include boton-estilo($primary-color, $tertiary-color);
+    }
+  }
+}
+
+.proyecto-software {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    color: $primary-color;
+    margin-bottom: 40px;
+    font-family: $font-family-title;
+  }
+
+  .proyecto-herramientas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    article {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 250px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+
+      img {
+        width: 80px;
+        margin-bottom: 15px;
+      }
+
+      h4 {
+        color: $secondary-color;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+.proyecto-testimonio {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: $tertiary-color;
+  color: white;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-family: $font-family-title;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    h3 {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 14px;
+      color: white;
+      margin: 0;
+    }
+  }
+}
+
+.proyecto-highlights {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+
+  h2 {
+    font-size: 28px;
+    color: $primary-color;
+    margin-bottom: 40px;
+    font-family: $font-family-title;
+  }
+
+  .proyecto-highlights-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    article {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      h4 {
+        font-size: 18px;
+        color: $secondary-color;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+.proyecto-conclusion {
+  padding: 60px 20px;
+  background-color: $background-color;
+  text-align: center;
+
+  h2 {
+    font-size: 28px;
+    color: $primary-color;
+    margin-bottom: 20px;
+    font-family: $font-family-title;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: 16px;
+    color: $text-color;
+  }
+
+  .proyecto-boton-final {
+    .proyecto-boton {
+      @include boton-estilo($secondary-color, $primary-color);
+    }
+  }
+}
